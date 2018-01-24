@@ -81,6 +81,19 @@ public class Schedule {
         System.out.println(Arrays.toString(quarters));
 
 
+        //  MAKE MENU HERE
+        //      choose a quarter
+        //          send new string, concat URL, to get new website text
+
+
+        
+
+        //  MAKE MENU AGAIN
+        //      choose program
+        //      choose class
+        //          send new string, concat URL, to get new website text
+        //          make new reg exp, to grab the schedule
+
 
 
 

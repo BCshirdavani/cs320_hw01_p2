@@ -21,6 +21,7 @@ import java.net.URL;
 import java.io.*;
 import java.net.*;
 import java.util.Arrays;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -28,18 +29,6 @@ public class Schedule {
 
     public static void main(String[] args) throws Exception{
 
-//---------------------------------------------------------------
-//        URL bc = new URL("https://www.bellevuecollege.edu/courses/exams/");
-//        BufferedReader in = new BufferedReader(new InputStreamReader((bc.openStream())));
-//
-//        String inputLine = "";
-//
-//        String text = "";
-//        while ((inputLine = in.readLine()) != null){
-//            text += inputLine + "\n";
-//        }
-//        in.close();
-//---------------------------------------------------------------
 
         // testing the get URL function and class
         String page = "https://www.bellevuecollege.edu/classes";
@@ -78,12 +67,55 @@ public class Schedule {
             quarters[quarterINDEX] = matcher2.group(1);
             quarterINDEX++;
         }
+
+
+
+        System.out.println("Available quarter + Year combos listed on page:");
         System.out.println(Arrays.toString(quarters));
+
 
 
         //  MAKE MENU HERE
         //      choose a quarter
         //          send new string, concat URL, to get new website text
+        Scanner scIN = new Scanner(System.in);
+        String choiceQTR = null;
+        while (choiceQTR == null){
+            System.out.println("Enter a quarter: ");
+            choiceQTR = scIN.nextLine();
+        }
+        String choiceYR = null;
+        while (choiceYR == null){
+            System.out.println("Enter a year: ");
+            choiceYR = scIN.nextLine();
+        }
+
+        String qtrYEAR = choiceQTR + choiceYR;
+        System.out.println(qtrYEAR);
+        String URLquarter = page + "/" + qtrYEAR;
+        String textQTR;
+        textQTR = URLget.URLcontent(URLquarter);
+
+        System.out.println("textQTR length: " + textQTR.length());
+        System.out.println(textQTR.toString());
+
+        //============================================================  ++
+        //  list all programs that start with a letter "A"
+        Pattern pattern3 = Pattern.compile("href=\"/classes/Spring2018/A\\w*\"(A.*)</a>");  // starts with "A"
+//        Pattern pattern3 = Pattern.compile("<h1.*pageTitle(\\w*)</h1>");
+        Matcher matcher3 = pattern3.matcher(textQTR);
+        int progINDEX = 0;
+        while(matcher3.find()){
+            System.out.println("program index: " + progINDEX);
+//            System.out.println(matcher3.group(0));
+            System.out.println(matcher3.group(1));
+//            quarters[progINDEX] = matcher3.group(0);
+//            quarters[progINDEX] = matcher3.group(1);
+            progINDEX++;
+        }
+        //============================================================  ++
+
+//        <a href="/classes/Spring2018/ACCT">Accounting</a>
 
 
         

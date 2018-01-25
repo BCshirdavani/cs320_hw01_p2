@@ -8,6 +8,9 @@
 //  File:           Schedule.java
 //                      main
 //
+//  TO-DO:  1-  Clean up reg exp for filtered list of classes
+//          2-  Finish final reg exp to grab Item#, Instructor, Days
+//
 //============================================================
 
 // this class will implement the menus
@@ -22,6 +25,7 @@ import java.io.*;
 import java.net.*;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.SortedSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -43,10 +47,10 @@ public class Schedule {
         Matcher matcher = pattern.matcher(text);
         int matchCounter = 0;
         while(matcher.find()){
-            System.out.println(matcher.group(1));
+//            System.out.println(matcher.group(1));
             matchCounter++;
         }
-        System.out.println("match count: " + matchCounter);
+//        System.out.println("match count: " + matchCounter);
 
 
         // Now grab the available quarters and put into a string array list
@@ -55,7 +59,7 @@ public class Schedule {
         String[] quarters = new String[matchCounter];
         int quarterINDEX = 0;
         while(matcher2.find()){
-            System.out.println("quarter index: " + quarterINDEX);
+//            System.out.println("quarter index: " + quarterINDEX);
             quarters[quarterINDEX] = matcher2.group(1);
             quarterINDEX++;
         }
@@ -85,12 +89,12 @@ public class Schedule {
         }
 
         String qtrYEAR = choiceQTR + choiceYR;
-        System.out.println(qtrYEAR);
+//        System.out.println(qtrYEAR);
         String URLquarter = page + "/" + qtrYEAR;
         String textQTR;
         textQTR = URLget.URLcontent(URLquarter);
 
-        System.out.println("textQTR length: " + textQTR.length());
+//        System.out.println("textQTR length: " + textQTR.length());
 //        System.out.println(textQTR.toString());
 
 
@@ -116,7 +120,7 @@ public class Schedule {
             System.out.println(matcher3.group(1));
             progINDEX++;
         }
-        System.out.println("progINDEX = " + progINDEX);
+//        System.out.println("progINDEX = " + progINDEX);
         //============================================================  ++
 
 
@@ -149,21 +153,40 @@ public class Schedule {
         String classURLext;
         int urlINDEX = 0;
         while(matcher4.find()){
-            System.out.println("matching URL extension is: " + matcher4.group(1));
+//            System.out.println("matching URL extension is: " + matcher4.group(1));
             classURLext = matcher4.group(1);
-            System.out.println("URL of page is: " + page);
+//            System.out.println("URL of page is: " + page);
             URLclass = page + classURLext;
-            System.out.println("Program URL is: " + URLclass);
+//            System.out.println("Program URL is: " + URLclass);
             urlINDEX++;
         }
 
         text = URLget.URLcontent(URLclass);
 
-        System.out.println("FINAL PAGE: \n\n" + text);
+//        System.out.println("FINAL PAGE: \n\n" + text);
 
 
-        String regExpSearch_5;
-        
+        String regExpSearch_5 = "<span\\sclass=.courseID.>" + "(" + choiceCID + ")" + "</span>.<span\\sclass=.courseTitle.>(.+)</span>";
+//        Pattern pattern5 = Pattern.compile("<span\\sclass=.courseID.>(.+)</span>.<span\\sclass=.courseTitle.>(.+)</span>");
+        Pattern pattern5 = Pattern.compile(regExpSearch_5);
+
+//        Pattern pattern5 = Pattern.compile("<span\\sclass=.courseID.>(.+)</span>.<span\\sclass=.courseTitle.>(.+).+<span\\sclass=.descriptor.>\\sItem\\snumber:\\s</span>.+(//d+).+</span>");
+//        Pattern pattern5 = Pattern.compile("<span\\sclass=.item-number.+<span.+</span>.+\\n(.+).*</span>");
+
+        Matcher matcher5 = pattern5.matcher(text);
+        int index5 = 0;
+        System.out.println(choicePROG + " Courses in " + choiceQTR + " " + choiceYR);
+        System.out.println("====================================");
+        while(matcher5.find()){
+//            System.out.println(matcher5.group(0));
+            System.out.println("Code: " + matcher5.group(1));
+            System.out.println("Title: " + matcher5.group(2));
+//            System.out.println(matcher5.group(3));
+            index5++;
+            System.out.println("====================================");
+        }
+//        System.out.println("index5 : " + index5);
+
 
 
     }

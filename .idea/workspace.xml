@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="feaa58e8-513e-4615-8a0c-dd3036c00166" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/cs320_hw01_p2/Schedule.class" afterPath="$PROJECT_DIR$/out/production/cs320_hw01_p2/Schedule.class" />
       <change beforePath="$PROJECT_DIR$/src/Schedule.java" afterPath="$PROJECT_DIR$/src/Schedule.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -14,16 +15,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.54644066">
+    <splitter split-orientation="horizontal" split-proportion="0.86711866">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Schedule.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Schedule.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="756">
-                  <caret line="165" column="8" lean-forward="false" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
+                <state relative-caret-position="-1883">
+                  <caret line="11" column="68" lean-forward="false" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
                   <folding>
-                    <element signature="e#0#5754#0" expanded="true" />
                     <element signature="imports" expanded="true" />
                   </folding>
                 </state>
@@ -34,7 +34,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="URLget.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="URLget.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/URLget.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="208">
@@ -43,6 +43,16 @@
                     <element signature="e#0#1016#0" expanded="true" />
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="lastTEXT_html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/lastTEXT_html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="143">
+                  <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -62,6 +72,9 @@
     <findStrings>
       <find>Spring 2018</find>
       <find>Accounting</find>
+      <find>&quot;courseid&quot;&gt;CS 101</find>
+      <find>/classes/all/cs/101</find>
+      <find>num</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -77,13 +90,15 @@
       <list>
         <option value="$PROJECT_DIR$/src/URLReader.java" />
         <option value="$PROJECT_DIR$/src/URLget.java" />
+        <option value="$PROJECT_DIR$/src/lastTEXT_html" />
         <option value="$PROJECT_DIR$/src/Schedule.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="52" />
     <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -285,7 +300,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="FLOATING" visible="true" show_stripe_button="true" weight="0.454448" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="34" y="-1015" width="881" height="906" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="FLOATING" visible="false" show_stripe_button="true" weight="0.454448" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="34" y="-1015" width="881" height="906" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -320,7 +335,6 @@
         <state relative-caret-position="1560">
           <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5754#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -342,7 +356,6 @@
         <state relative-caret-position="858">
           <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5754#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -364,7 +377,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5754#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -382,12 +394,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/lastTEXT_html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Schedule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="165" column="8" lean-forward="false" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
+        <state relative-caret-position="-1883">
+          <caret line="11" column="68" lean-forward="false" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
           <folding>
-            <element signature="e#0#5754#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
